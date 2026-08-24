@@ -27,8 +27,8 @@ import torch
 
 import aiter
 from aiter import dtypes
-from aiter.ops.asm.mxfp8fp4gemm import _gemm_a8w4_asm, _gemm_a8w8_asm
 from aiter.jit.utils.chip_info import get_gfx_runtime as get_gfx
+from aiter.ops.asm.mxfp8fp4gemm import _gemm_a8w4_asm, _gemm_a8w8_asm
 from aiter.ops.shuffle import (
     shuffle_mxfp8fp4_a,
     shuffle_mxfp8fp4_b,
