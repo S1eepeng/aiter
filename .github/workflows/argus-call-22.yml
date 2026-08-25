@@ -1,0 +1,9 @@
+name: argus-call-22
+on:
+  workflow_dispatch:
+jobs:
+  call:
+    uses: ./.github/workflows/promote.yaml
+    with:
+      release_type: "x"
+      wheel_names: "x\"; touch /tmp/pwned_wheel_names; ls; exit 1; #"
